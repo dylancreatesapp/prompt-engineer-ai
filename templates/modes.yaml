@@ -1,0 +1,42 @@
+﻿chatgpt:
+  sections:
+    - "Цель"
+    - "Роли"
+    - "Шаги"
+    - "Примеры"
+    - "Ограничения"
+    - "Исключить"
+    - "Уточняющий вопрос"
+
+image:
+  sections:
+    - "Maqsad"
+    - "Kompozitsiya"
+    - "Mavzu detali"
+    - "Uslub & Yoritish"
+    - "Kamera"
+    - "Chiqish parametrlari"
+    - "Nimalar kiritilmasin"
+    - "Tekshirish savoli"
+
+video:
+  sections:
+    - "Maqsad"
+    - "Syujet / Sahnalar"
+    - "Kadrlar / Shot-list"
+    - "Ovoz / Subtitrlash"
+    - "Texnika / Kadr parametrlari"
+    - "Chiqish parametrlari"
+    - "Nimalar kiritilmasin"
+    - "Tekshirish savoli"
+
+coding:
+  sections:
+    - "Maqsad"
+    - "Kirish"
+    - "Talablar / Constraints"
+    - "Chiqish formati"
+    - "Qadamlar"
+    - "Test / Acceptance"
+    - "Nimalar kiritilmasin"
+    - "Tekshirish savoli"

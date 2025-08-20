@@ -1,0 +1,37 @@
+modes_yaml = r"""
+coding:
+sections:
+- "Maqsad / Цель"
+- "Kirish ma’lumotlari / Входные данные"
+- "Cheklovlar / Ограничения"
+- "Chiqish formati / Формат вывода"
+- "Qadamlar / Шаги"
+- "Testlar / Тесты"
+- "Tekshirish savoli / Уточняющий вопрос"
+image:
+sections:
+- "Maqsad / Цель"
+- "Kompozitsiya / Композиция"
+- "Mavzu detali / Детали объекта"
+- "Uslub & Yoritish / Стиль и свет"
+- "Kamera / Камера"
+- "Chiqish parametrlari / Параметры вывода"
+- "Nimalar kiritilmasin / Исключить"
+- "Tekshirish savoli / Уточняющий вопрос"
+video:
+sections:
+- "Maqsad / Цель"
+- "Syujet qismlari / Сцены"
+- "Kadr ro'yxati / Шот-лист"
+- "Ovoz & Subtitr / Озвучка и субтитры"
+- "Chiqish parametrlari / Параметры вывода"
+- "Tekshirish savoli / Уточняющий вопрос"
+chatgpt:
+sections:
+- "Maqsad / Цель"
+- "Rollar / Роли"
+- "Qadamlar / Шаги"
+- "Misollar / Примеры"
+- "Cheklovlar / Ограничения"
+- "Tekshirish savoli / Уточняющий вопрос"
+"""

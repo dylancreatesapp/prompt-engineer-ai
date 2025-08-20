@@ -1,0 +1,22 @@
+﻿ollama:
+  model: gpt-oss:20b
+  temperature: 0.4
+  top_p: 0.9
+  num_ctx: 2048
+  keep_alive: "30m"
+
+refiner:
+  max_bullets: 10
+  include_negative_prompts: true
+  include_constraints: true
+  include_style_guidance: true
+
+chat:
+  raw:
+    model: qwen2.5:7b
+    num_ctx: 2048
+  engineer:
+    chatgpt: { model: gpt-oss:20b,  num_ctx: 4096 }
+    coding:  { model: gpt-oss:20b,  num_ctx: 4096 }
+    image:   { model: mistral:latest, num_ctx: 2048 }
+    video:   { model: mistral:latest, num_ctx: 2048 }

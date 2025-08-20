@@ -1,0 +1,12 @@
+﻿ollama:
+  model: gpt-oss:20b
+  temperature: 0.4
+  top_p: 0.9
+  num_ctx: 4096          # 4096 is a good balance; lower = faster load
+  keep_alive: "30m"      # keep 20B in RAM so the next calls are instant
+
+refiner:
+  max_bullets: 10
+  include_negative_prompts: true
+  include_constraints: true
+  include_style_guidance: true
