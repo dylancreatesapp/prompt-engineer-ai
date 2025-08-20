@@ -9,11 +9,14 @@ app = FastAPI(title="Prompt Engineer AI", version="1.0")
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # or ["https://prompt-engineer-ui.vercel.app"] for more security
+    allow_origins=[
+        "https://prompt-engineer-ui.vercel.app"
+    ],  # frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Request model
 class PromptRequest(BaseModel):
