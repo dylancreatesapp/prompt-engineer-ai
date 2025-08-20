@@ -9,10 +9,7 @@ app = FastAPI(title="Prompt Engineer AI", version="1.0")
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://prompt-engineer-ui.vercel.app",  # your frontend
-        "http://localhost:3000",                  # for local testing
-    ],
+    allow_origins=["*"],  # or ["https://prompt-engineer-ui.vercel.app"] for more security
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
