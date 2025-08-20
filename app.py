@@ -1,9 +1,22 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Literal
+from fastapi.middleware.cors import CORSMiddleware
 import prompt_engineer_ai  # your refinement logic
 
 app = FastAPI(title="Prompt Engineer AI", version="1.0")
+
+# CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://prompt-engineer-ui.vercel.app",  # your frontend
+        "http://localhost:3000",                  # for local testing
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Request model
 class PromptRequest(BaseModel):
