@@ -244,3 +244,32 @@ if __name__ == "__main__":
         print(text)
     else:
         print("\n")
+# ---------------------------
+# FastAPI Bridge Function
+# ---------------------------
+
+def refine(text: str, mode: Literal["coding", "image", "video", "chatgpt"] = "chatgpt", profile: str = "balanced") -> str:
+    """
+    Entry point for external apps (e.g., FastAPI) to refine a prompt.
+    Defaults: mode='chatgpt', profile='balanced'.
+    """
+    cfg = load_config()
+    refiner = build_refiner()
+
+    # Profile presets
+    presets = {
+        "speed":    {"model": "qwen2.5:7b",   "num_ctx": 2048},
+        "balanced": {"model": "mistral:latest","num_ctx": 4096},
+        "max":      {"model": cfg.model,      "num_ctx": cfg.num_ctx},
+    }
+    prof = presets.get(profile, presets["balanced"])
+
+    # Generate
+    result = refiner.refine(
+        raw_prompt=text,
+        mode=mode,
+        model=prof["model"],
+        num_ctx=prof["num_ctx"],
+        stream=False
+    )
+    return result
